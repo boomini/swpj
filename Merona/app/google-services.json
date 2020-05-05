@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "593786348428",
+    "firebase_url": "https://merona-7faa6.firebaseio.com",
+    "project_id": "merona-7faa6",
+    "storage_bucket": "merona-7faa6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593786348428:android:b19016b59128497518eca9",
+        "android_client_info": {
+          "package_name": "com.example.jumi.merona"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593786348428-dckebbovrkas7v1fcjlg2v5hgqsc8jab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2F8lrDi-c4WlacWwIsTC6dpZsoD-yFuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593786348428-dckebbovrkas7v1fcjlg2v5hgqsc8jab.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

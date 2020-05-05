@@ -12,7 +12,8 @@ import android.widget.Toast;
 import com.example.jumi.merona.data.BoardData;
 import com.example.jumi.merona.data.BoardResponse;
 import com.example.jumi.merona.network.ServiceApi;
-
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -23,10 +24,11 @@ import retrofit2.Response;
 public class List_Write extends Activity implements View.OnClickListener {
     EditText mstart, marrive, mprice, mcontent, mnum;
     String tstart, tarrive, tcontent, tprice;
-    int tnum;
+    int tnum=0;
 
     private ServiceApi service;
-
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference reference = database.getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,11 @@ public class List_Write extends Activity implements View.OnClickListener {
                     startWrite(new BoardData(10, tcontent, tstart, tarrive, "201514736","2019-11-29",Integer.parseInt(tprice)));
                     Intent intent = new Intent(this, List_Activity.class);
                     startActivity(intent);
+                    tnum++;
+                    reference.child("table"+tnum).child("tstart").setValue(tstart);
+                    reference.child("table"+tnum).child("tarrive").setValue(tarrive);
+                    reference.child("table"+tnum).child("tprice").setValue(tprice);
+                    reference.child("table"+tnum).child("tcontent").setValue(tcontent);
                     finish();
                 }
         }
